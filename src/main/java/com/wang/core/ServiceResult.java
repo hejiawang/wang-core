@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
  *    看到消息代码时能够比较直观的理解所代表的错误类型。
  *
  * @version 2.0
- * @author yintao
+ * @author HeJiawang
  */
 public class ServiceResult<T> implements Serializable {
 
