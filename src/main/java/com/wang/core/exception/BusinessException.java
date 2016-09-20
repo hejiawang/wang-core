@@ -12,8 +12,8 @@ package com.wang.core.exception;
  * </ul>
  * 代码在抛出这类型异常之前，必须先将详细描述信息、内部异常堆栈等记录到日志中，
  *
- * @author yintao
- * @version 1.0.0
+ * @author HeJiawang
+ * @date   2016.09.20
  *
  */
 public class BusinessException extends RuntimeException {
