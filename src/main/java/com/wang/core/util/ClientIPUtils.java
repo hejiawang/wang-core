@@ -4,7 +4,11 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
 
-
+/**
+ * IP Util
+ * @author HeJiawang
+ * @date   2016.09.20
+ */
 public class ClientIPUtils {
 	
 	/**
