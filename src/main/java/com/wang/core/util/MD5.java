@@ -59,7 +59,7 @@ public class MD5 {
 	    }
 	    return digestHexStr;
     }
-    
+	
 	// 私有构造
 	private MD5() {
 		
@@ -318,6 +318,7 @@ public class MD5 {
 	public  String getMD5String1(String str){
 		return getMD5ofStr(str);
 	}
+	
 	/**
 	 * 将明文加密两次
 	 * */
@@ -330,4 +331,5 @@ public class MD5 {
 	public String getMD5String4(String str){
 		return getMD5ofStr(getMD5ofStr(getMD5ofStr(getMD5ofStr(str))));
 	}
+	
 }

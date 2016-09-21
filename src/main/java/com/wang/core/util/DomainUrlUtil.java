@@ -24,6 +24,19 @@ public class DomainUrlUtil {
 	public static String CSS_BASEURL_DOMAIN;
 	
 	/**
+	 * COOKIE名称
+	 */
+	public static String COOKIE_DOMAIN;
+	
+	public String getCOOKIE_DOMAIN() {
+		return COOKIE_DOMAIN;
+	}
+
+	public void setCOOKIE_DOMAIN(String cOOKIE_DOMAIN) {
+		COOKIE_DOMAIN = cOOKIE_DOMAIN;
+	}
+
+	/**
 	 * 图片路径
 	 */
 	public static String IMG_BASEURL_DOMAIN;

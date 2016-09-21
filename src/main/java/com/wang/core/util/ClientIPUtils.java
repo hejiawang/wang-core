@@ -35,5 +35,44 @@ public class ClientIPUtils {
         }
         return ip;
     }
+	
+	public static String getIpAddr(HttpServletRequest request) {
+		String ip = request.getHeader("X-Forwarded-For");
+		// 如果客户端经过多级反向代理，则X-Forwarded-For的值并不止一个，而是一串IP值，
+		// 取X-Forwarded-For中第一个非unknown的有效IP字符串即为用户真实IP
+		String ipResult = getIp(ip);
+		if (ipResult != null) {
+			return ipResult;
+		}
+		ip = request.getHeader("Proxy-Client-IP");
+		ipResult = getIp(ip);
+		if (ipResult != null) {
+			return ipResult;
+		}
+		ip = request.getHeader("WL-Proxy-Client-IP");
+		ipResult = getIp(ip);
+		if (ipResult != null) {
+			return ipResult;
+		}
+		ip = request.getRemoteAddr();
+		ipResult = getIp(ip);
+		if (ipResult != null) {
+			return ipResult;
+		}
+		return "";
+	}
+
+	private static String getIp(String ips) {
+		if (StringUtils.isEmpty(ips)) {
+			return null;
+		}
+		String[] tokens = ips.split(",");
+		for (String s : tokens) {
+			if (RegExpValidator.isIpAddress(s.trim())) {
+				return s.trim();
+			}
+		}
+		return null;
+	}
 
 }
