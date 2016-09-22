@@ -22,6 +22,11 @@ public class DomainUrlUtil {
 	 * CSS路径
 	 */
 	public static String CSS_BASEURL_DOMAIN;
+
+	/**
+	 * 图片路径
+	 */
+	public static String IMG_BASEURL_DOMAIN;
 	
 	/**
 	 * COOKIE名称
@@ -35,11 +40,6 @@ public class DomainUrlUtil {
 	public void setCOOKIE_DOMAIN(String cOOKIE_DOMAIN) {
 		COOKIE_DOMAIN = cOOKIE_DOMAIN;
 	}
-
-	/**
-	 * 图片路径
-	 */
-	public static String IMG_BASEURL_DOMAIN;
 
 	public String getBASEURL_DOMAIN() {
 		return BASEURL_DOMAIN;
