@@ -48,11 +48,11 @@ public class CookieHelper {
 	/**
 	 * 添加cookie
 	 */
-	public static void addCookie(String cookieName, String value, String domain, String cookiePath,
+	public static void addCookie(String cookieName, String value, /*String domain,*/ String cookiePath,
 			int cookieExpiryDate, HttpServletResponse response) {
 		log.debug("正在写入Cookie.......");
 		Cookie cookie = new Cookie(cookieName, value);
-		cookie.setDomain(domain);
+		//cookie.setDomain(domain);
 		cookie.setPath(cookiePath);
 		cookie.setMaxAge(cookieExpiryDate);
 		response.addCookie(cookie);
