@@ -9,7 +9,7 @@ import com.wang.core.exception.ArgumentException;
  * <p>
  * Page index从1开始递增，第1页的page index为1，第2页的page index为2，以此类推第n页的page index为n。
  *
- * @author yintao
+ * @author HeJiawang
  * @version 1.0
  */
 public class PagerInfo implements Serializable {

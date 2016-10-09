@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 /**
  * 标识MyBatis的DAO,方便{@link org.mybatis.spring.mapper.MapperScannerConfigurer}的扫描。
  *
- * @author yintao
+ * @author HeJiawang
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
