@@ -17,10 +17,30 @@ public class WebConstants implements Serializable {
 
 	private static final long serialVersionUID = -3329954815267942671L;
 	
+	/**
+	 * 文件上传路径
+	 */
 	public static String  UPLOADURL;
+	
+	/**
+	 * 
+	 */
 	public static String  Config_ACCESS_KEY;
+	
+	/**
+	 * 
+	 */
 	public static String  Config_SECRET_KEY;
+	
+	/**
+	 * 
+	 */
 	public static String  bucketName;
+	
+	/**
+	 * 权限——组织的根节点
+	 */
+	public static Integer OrgRootID;
 	
 	static {
 		ResourceBundle config = ResourceBundle.getBundle("core/web-constants");
@@ -29,6 +49,7 @@ public class WebConstants implements Serializable {
 		Config_ACCESS_KEY=config.getString("Config_ACCESS_KEY");
 		Config_SECRET_KEY=config.getString("Config_SECRET_KEY");
 		bucketName=config.getString("bucketName");
+		OrgRootID = Integer.parseInt(config.getString("permission.OrgRootID"));
 	}
 	
 }
