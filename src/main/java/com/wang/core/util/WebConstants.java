@@ -42,6 +42,21 @@ public class WebConstants implements Serializable {
 	 */
 	public static Integer OrgRootID;
 	
+	/**
+	 * 权限管理系统超级管理员ID
+	 */
+	public static Integer permissionAdminID;
+	
+	/**
+	 * 权限管理系统
+	 */
+	public static String NAMESPACE_PERMISSION_WEB;
+	
+	/**
+	 * 权限管理系统session
+	 */
+	public static String NAMESPACE_PERMISSION_WEB_SESSION;
+	
 	static {
 		ResourceBundle config = ResourceBundle.getBundle("core/web-constants");
 		
@@ -50,6 +65,9 @@ public class WebConstants implements Serializable {
 		Config_SECRET_KEY=config.getString("Config_SECRET_KEY");
 		bucketName=config.getString("bucketName");
 		OrgRootID = Integer.parseInt(config.getString("permission.OrgRootID"));
+		permissionAdminID = Integer.parseInt(config.getString("permission.adminID"));
+		NAMESPACE_PERMISSION_WEB = config.getString("permission.web");
+		NAMESPACE_PERMISSION_WEB_SESSION = NAMESPACE_PERMISSION_WEB + ":session:";
 	}
 	
 }
