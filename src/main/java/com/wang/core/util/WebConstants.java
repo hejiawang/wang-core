@@ -43,7 +43,7 @@ public class WebConstants implements Serializable {
 	public static Integer OrgRootID;
 	
 	/**
-	 * 权限管理系统超级管理员ID
+	 * 权限管理系统超级管理员ID、超级管理员角色ID、值为1
 	 */
 	public static Integer permissionAdminID;
 	
