@@ -48,27 +48,27 @@ public class DomainUrlUtil {
 	 */
 	public static String PERMISSION_DOMAIN;
 	
-	public static String getPERMISSION_DOMAIN() {
+	public String getPERMISSION_DOMAIN() {
 		return PERMISSION_DOMAIN;
 	}
 
-	public static void setPERMISSION_DOMAIN(String pERMISSION_DOMAIN) {
+	public void setPERMISSION_DOMAIN(String pERMISSION_DOMAIN) {
 		PERMISSION_DOMAIN = pERMISSION_DOMAIN;
 	}
 
-	public static String getSEARCH_DOMAIN() {
+	public String getSEARCH_DOMAIN() {
 		return SEARCH_DOMAIN;
 	}
 
-	public static void setSEARCH_DOMAIN(String sEARCH_DOMAIN) {
+	public void setSEARCH_DOMAIN(String sEARCH_DOMAIN) {
 		SEARCH_DOMAIN = sEARCH_DOMAIN;
 	}
 
-	public static String getTPL_DOMAIN() {
+	public String getTPL_DOMAIN() {
 		return TPL_DOMAIN;
 	}
 
-	public static void setTPL_DOMAIN(String tPL_DOMAIN) {
+	public void setTPL_DOMAIN(String tPL_DOMAIN) {
 		TPL_DOMAIN = tPL_DOMAIN;
 	}
 
