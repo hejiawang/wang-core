@@ -5,10 +5,14 @@ import java.io.Serializable;
 import com.wang.core.exception.ArgumentException;
 
 /**
- * 分页信息。
+ * 分页信息。</br>
  * <p>
- * Page index从1开始递增，第1页的page index为1，第2页的page index为2，以此类推第n页的page index为n。
- *
+ * Page index,从1开始递增，第1页的page index为1，第2页的page index为2，以此类推第n页的page index为n.</br>
+ * Page Size,默认20，每页的记录数.</br>
+ * rowsCount,总记录数.</br>
+ * <p>
+ * 使用：limit PagerInfo.getStart(), PagerInfo.getPageSize()</br>
+ * 
  * @author HeJiawang
  * @version 1.0
  */
@@ -33,6 +37,9 @@ public class PagerInfo implements Serializable {
 		this.pageSize = pageSize;
 	}
 
+	/**
+	 * 分页信息——第几页
+	 */
 	private int pageIndex = 1;
 
 	/**
@@ -43,6 +50,14 @@ public class PagerInfo implements Serializable {
 	public int getPageIndex() {
 		return this.pageIndex;
 	}
+	
+	/**
+	 * 设置第几页,默认为1
+	 * @param pageIndex
+	 */
+	public void setPageIndex( int pageIndex ){
+		this.pageIndex = pageIndex;
+	}
 
 	/**
 	 * 取MySQL数据库 limit m,n 语句的开始索引值m。
@@ -51,6 +66,9 @@ public class PagerInfo implements Serializable {
 		return (this.pageIndex - 1) * this.pageSize;
 	}
 
+	/**
+	 * 分页信息——每页记录数
+	 */
 	private int pageSize = 20;
 
 	/**
@@ -59,7 +77,18 @@ public class PagerInfo implements Serializable {
 	public int getPageSize() {
 		return this.pageSize;
 	}
+	
+	/**
+	 * 设置每页记录数，默认为20
+	 * @param pageSize 每页记录数
+	 */
+	public void setPageSize( int pageSize){
+		this.pageSize = pageSize;
+	}
 
+	/**
+	 * 总记录数
+	 */
 	private int rowsCount = 0;
 
 	/**
