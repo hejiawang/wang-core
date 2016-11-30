@@ -15,7 +15,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * Memcached客户端
  *
- * @author yintao
+ * @author HeJiawang
  * @version 1.0
  */
 @Component

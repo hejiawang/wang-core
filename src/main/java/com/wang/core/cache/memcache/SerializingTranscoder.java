@@ -13,7 +13,7 @@ import java.util.Date;
  * 该类负责反序列化直接使用xmemcached api，且transcoder使用SerializingTranscoder进行序列化存储的缓存。
  * 使用时需指明SerializationType为CUSTOM。
  *
- * @author yintao
+ * @author HeJiawang
  * @version 1.0
  */
 public class SerializingTranscoder extends BaseSerializingTranscoder implements CacheTranscoder {
