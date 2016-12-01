@@ -57,6 +57,16 @@ public class WebConstants implements Serializable {
 	 */
 	public static String NAMESPACE_PERMISSION_WEB_SESSION;
 	
+	/**
+	 * so love
+	 */
+	public static String NAMESPACE_SOLOVE_WEB;
+	
+	/**
+	 * so love session
+	 */
+	public static String NAMESPACE_SOLOVE_WEB_SESSION;
+	
 	static {
 		ResourceBundle config = ResourceBundle.getBundle("core/web-constants");
 		
@@ -66,8 +76,12 @@ public class WebConstants implements Serializable {
 		bucketName=config.getString("bucketName");
 		OrgRootID = Integer.parseInt(config.getString("permission.OrgRootID"));
 		permissionAdminID = Integer.parseInt(config.getString("permission.adminID"));
+		
 		NAMESPACE_PERMISSION_WEB = config.getString("permission.web");
 		NAMESPACE_PERMISSION_WEB_SESSION = NAMESPACE_PERMISSION_WEB + ":session:";
-	}
+		
+		NAMESPACE_SOLOVE_WEB = config.getString("soLove.web");
+		NAMESPACE_SOLOVE_WEB_SESSION = NAMESPACE_SOLOVE_WEB + ":session:";
+	} 
 	
 }
