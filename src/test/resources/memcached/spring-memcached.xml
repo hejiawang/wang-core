@@ -19,8 +19,7 @@
 	    </property>
 	    <property name="addressProvider">
 	      <bean class="com.google.code.ssm.config.DefaultAddressProvider">
-	        <property name="address" value="${pom.memcached.addr}" />
-	        <!-- <property name="address" value="${prop.memcached.addr}" /> -->
+	        <property name="address" value="127.0.0.1:11211" />
 	      </bean>
 	    </property>
 	    <property name="customTranscoder">
@@ -44,12 +43,10 @@
 			<list>
 				<bean class="java.net.InetSocketAddress">
 					<constructor-arg>
-						<value>${pom.session.memcached.addr}</value>
-						<!-- <value>${prop.session.memcached.addr}</value> -->
+						<value>127.0.0.1</value>
 					</constructor-arg>
 					<constructor-arg>
-						<value>${pom.session.memcached.port}</value>
-						<!-- <value>${prop.session.memcached.port}</value> -->
+						<value>11211</value>
 					</constructor-arg>
 				</bean>
 			</list>

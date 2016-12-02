@@ -237,6 +237,12 @@
 		  <artifactId>qiniu-java-sdk</artifactId>
 		  <version>7.0.0</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	
 	<!--  
